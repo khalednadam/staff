@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
     <item
         android:id="@+id/action_search"
         android:title="Search"
@@ -8,5 +9,9 @@
         app:showAsAction="ifRoom|collapseActionView"
         android:icon="@android:drawable/ic_menu_search"
         android:iconTint="@color/white"
+        />
+    <item
+        android:id="@+id/signout"
+        android:title="Logout"
         />
 </menu>
