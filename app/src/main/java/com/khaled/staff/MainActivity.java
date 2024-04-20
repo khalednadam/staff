@@ -1,5 +1,6 @@
 package com.khaled.staff;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -7,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.ActionBar;
@@ -19,6 +21,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView recycler;
     private EmployeeAdapter adapter;
     private List<Employee> employeeList;
+    FloatingActionButton addNewEmployeeBtn;
 
 
     @Override
@@ -34,14 +39,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         ActionBar actionBar;
         actionBar = getSupportActionBar();
-
-        // Define ColorDrawable object and parse color
-        // using parseColor method
-        // with color hash code as its parameter
+        addNewEmployeeBtn = findViewById(R.id.add_new_employee_btn);
+        addNewEmployeeBtn.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, AddEmployeeActivity.class);
+            startActivity(intent);
+        });
         ColorDrawable colorDrawable
                 = new ColorDrawable(Color.parseColor("#0D7EF4"));
-
-        // Set BackgroundDrawable
         assert actionBar != null;
         actionBar.setBackgroundDrawable(colorDrawable);
 
