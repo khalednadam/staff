@@ -1,0 +1,11 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Staff" parent="Theme.Material3.Light">
+        <!-- Customize your light theme here. -->
+         <item name="colorPrimary">@color/primary</item>
+        <item name="titleTextColor">@color/white</item>
+        <item name="colorAccent">@color/white</item>
+    </style>
+    <style name="Theme.Staff" parent="Base.Theme.Staff" />
+
+</resources>
