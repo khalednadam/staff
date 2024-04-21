@@ -23,7 +23,7 @@ public class EditEmployeeActivity extends AppCompatActivity {
     private static final int PICK_IMAGE_REQUEST = 1;
 
     private ImageView selectedImageView;
-    TextInputEditText name, email, phone;
+    TextInputEditText name, email, phone, title;
     AutoCompleteTextView gender;
 
     @Override
@@ -37,17 +37,20 @@ public class EditEmployeeActivity extends AppCompatActivity {
             String employeePhone = intent.getStringExtra("employee_phone");
             String employeeEmail = intent.getStringExtra("employee_email");
             String employeeGender = intent.getStringExtra("employee_gender");
+            String employeeTitle = intent.getStringExtra("employee_title");
             // Retrieve more extra data as needed
             // Use the employeeId to fetch the employee information from your data source
             name = findViewById(R.id.edit_name);
             email = findViewById(R.id.edit_email);
             phone = findViewById(R.id.edit_phone);
             gender = findViewById(R.id.edit_gender);
+            title = findViewById(R.id.edit_title);
 
             name.setText(employeeName);
             email.setText(employeeEmail);
             phone.setText(employeePhone);
             gender.setText(employeeGender);
+            title.setText(employeeTitle);
 
         }
 

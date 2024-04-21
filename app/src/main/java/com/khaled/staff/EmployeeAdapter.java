@@ -53,6 +53,7 @@ public class EmployeeAdapter extends RecyclerView.Adapter<EmployeeAdapter.ViewHo
                 intent.putExtra("employee_email", employee.getEmail());
                 intent.putExtra("employee_phone", employee.getPhone());
                 intent.putExtra("employee_gender", employee.getGender());
+                intent.putExtra("employee_title", employee.getTitle());
                 mContext.startActivity(intent);
             }
         });
@@ -62,6 +63,9 @@ public class EmployeeAdapter extends RecyclerView.Adapter<EmployeeAdapter.ViewHo
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.name.setText(employees.get(position).getName());
+        holder.title.setText(employees.get(position).getTitle());
+        holder.email.setText(employees.get(position).getEmail());
+        holder.phone.setText(employees.get(position).getPhone());
     }
 
     @Override
@@ -71,11 +75,14 @@ public class EmployeeAdapter extends RecyclerView.Adapter<EmployeeAdapter.ViewHo
 
     //    private List<Employee> employeeList;
     public class ViewHolder extends RecyclerView.ViewHolder {
-        private TextView name;
+        private TextView name, title, phone, email;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             name = itemView.findViewById(R.id.employee_name);
+            title = itemView.findViewById(R.id.employee_title);
+            email = itemView.findViewById(R.id.employee_email);
+            phone = itemView.findViewById(R.id.employee_phone);
         }
     }
 }

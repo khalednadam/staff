@@ -83,11 +83,27 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
+        style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/phone_layout"
+        android:layout_marginTop="20dp"
+        android:hint="Title">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/gender_layout"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/phone_layout"
+        android:layout_below="@id/title_layout"
         android:layout_marginTop="20dp"
         android:hint="Gender">
 
@@ -99,7 +115,6 @@
             android:inputType="none"></AutoCompleteTextView>
 
     </com.google.android.material.textfield.TextInputLayout>
-
 
     <Button
         android:id="@+id/button_add"
