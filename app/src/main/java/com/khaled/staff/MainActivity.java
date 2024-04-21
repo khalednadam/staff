@@ -51,15 +51,15 @@ public class MainActivity extends AppCompatActivity {
 
         recycler = findViewById(R.id.recycler);
         ArrayList<Employee> employees = new ArrayList<>();
-        employees.add(new Employee("Khaled Nadam", "software engineer", "+905055555", "jgaked", "male", "df"));
-        employees.add(new Employee("Tahsin Nadam", "software engineer", "+905055555", "jgaked", "male", "df"));
-        employees.add(new Employee("Fouaad Nadam", "software engineer", "+905055555", "jgaked", "male", "df"));
-        employees.add(new Employee("Ahmad Nadam", "software engineer", "+905055555", "jgaked", "male", "df"));
-        employees.add(new Employee("Khaled Nadam", "software engineer", "+905055555", "jgaked", "male", "df"));
-        employees.add(new Employee("Tahsin Nadam", "software engineer", "+905055555", "jgaked", "male", "df"));
-        employees.add(new Employee("Fouaad Nadam", "software engineer", "+905055555", "jgaked", "male", "df"));
-        employees.add(new Employee("Ahmad Nadam", "software engineer", "+905055555", "jgaked", "male", "df"));
-        EmployeeAdapter adapter1 = new EmployeeAdapter();
+        employees.add(new Employee("1", "Khaled Nadam", "software engineer", "+905055555", "jgaked", "Male", "df"));
+        employees.add(new Employee("2", "Tahsin Nadam", "software engineer", "+905055555", "jgaked", "Male", "df"));
+        employees.add(new Employee("3", "Fouaad Nadam", "software engineer", "+905055555", "jgaked", "Male", "df"));
+        employees.add(new Employee("4", "Ahmad Nadam", "software engineer", "+905055555", "jgaked", "Male", "df"));
+        employees.add(new Employee("5", "Khaled Nadam", "software engineer", "+905055555", "jgaked", "Male", "df"));
+        employees.add(new Employee("6", "Tahsin Nadam", "software engineer", "+905055555", "jgaked", "Male", "df"));
+        employees.add(new Employee("7", "Fouaad Nadam", "software engineer", "+905055555", "jgaked", "Male", "df"));
+        employees.add(new Employee("8", "Ahmad Nadam", "software engineer", "+905055555", "jgaked", "Male", "df"));
+        EmployeeAdapter adapter1 = new EmployeeAdapter(this);
         adapter1.setEmployees(employees);
 
         recycler.setAdapter(adapter1);
@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
         assert searchView != null;
         searchView.setQueryHint("Search");
 
-        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener(){
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
                 return false;
@@ -87,6 +87,6 @@ public class MainActivity extends AppCompatActivity {
             }
 
         });
-            return super.onCreateOptionsMenu(menu);
+        return super.onCreateOptionsMenu(menu);
     }
 }

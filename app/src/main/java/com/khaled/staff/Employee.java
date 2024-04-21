@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class Employee {
-    private String name, title, phone, email, gender, image;
+    private String name, title, phone, email, gender, image, id;
 //    private TextView emp_name;
 //    public class ViewHolder extends RecyclerView.ViewHolder{
 //        public ViewHolder(@NonNull View itemView){
@@ -16,7 +16,16 @@ public class Employee {
 //        }
 //    }
 
-    public Employee(String name, String title, String phone, String email, String gender, String image) {
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public Employee(String id, String name, String title, String phone, String email, String gender, String image) {
+        this.id = id;
         this.name = name;
         this.title = title;
         this.phone = phone;
