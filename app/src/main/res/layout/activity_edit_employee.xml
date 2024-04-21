@@ -108,7 +108,7 @@
         android:layout_below="@id/gender_layout"
         android:layout_marginTop="20dp"
         android:backgroundTint="@color/primary"
-        android:text="Add"
+        android:text="Edit"
         android:textColor="@android:color/white" />
 
 </RelativeLayout>
