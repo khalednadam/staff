@@ -2,10 +2,13 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.Staff" parent="Theme.Material3.Light">
         <!-- Customize your light theme here. -->
+        <item name="background">@color/bg</item>
+        <item name="backgroundColor">@color/bg</item>
          <item name="colorPrimary">@color/primary</item>
         <item name="titleTextColor">@color/white</item>
-        <item name="backgroundColor">@color/primary</item>
     </style>
     <style name="Theme.Staff" parent="Base.Theme.Staff" />
-
+    <style name="MyActionButtonOverflow" parent="Theme.Material3.Light">
+        <item name="color">@color/white</item>
+    </style>
 </resources>
