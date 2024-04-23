@@ -100,7 +100,8 @@ public class MainActivity extends AppCompatActivity {
             startActivity(new Intent(this, SettingsActivity.class));
             return true;
         } else if (id == R.id.signout) {
-            // Handle sign out action
+            // Handle sign out actionstartActivity(new Intent(this, ));
+            startActivity(new Intent(this, LoginActivity.class));
             return true;
         } else {
             return super.onOptionsItemSelected(item);

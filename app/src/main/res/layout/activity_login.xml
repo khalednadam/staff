@@ -55,11 +55,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/forgot_password"
-        android:textColor="@color/black"
-        android:alpha="0."
         android:layout_alignEnd="@id/password_layout"
         android:layout_below="@+id/password_layout"
-        style="@style/Widget.Material3.Button.TextButton"
+        style="@style/Widget.MaterialComponents.Button"
         />
     <Button
         android:id="@+id/login_button"
@@ -73,7 +71,7 @@
         android:layout_below="@+id/forgot_password_button"
         />
     <Button
-        android:id="@+id/switch_to_login_button"
+        android:id="@+id/switch_to_register_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/secondary"
