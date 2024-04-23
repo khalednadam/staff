@@ -57,6 +57,21 @@ public class EmployeeAdapter extends RecyclerView.Adapter<EmployeeAdapter.ViewHo
                 mContext.startActivity(intent);
             }
         });
+        Button infoBtn = view.findViewById(R.id.info_btn);
+        infoBtn.setOnClickListener(v -> {
+            int position = viewHolder.getAdapterPosition();
+            if (position != RecyclerView.NO_POSITION) {
+                Employee employee = employees.get(position);
+                Intent intent = new Intent(mContext, EmployeeInfoActivity.class);
+                intent.putExtra("employee_id", employee.getId());
+                intent.putExtra("employee_name", employee.getName());
+                intent.putExtra("employee_email", employee.getEmail());
+                intent.putExtra("employee_phone", employee.getPhone());
+                intent.putExtra("employee_gender", employee.getGender());
+                intent.putExtra("employee_title", employee.getTitle());
+                mContext.startActivity(intent);
+            }
+        });
         return viewHolder;
     }
 

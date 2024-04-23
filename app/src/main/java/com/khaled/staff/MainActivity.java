@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
@@ -37,13 +38,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ActionBar actionBar;
-        actionBar = getSupportActionBar();
         addNewEmployeeBtn = findViewById(R.id.add_new_employee_btn);
         addNewEmployeeBtn.setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this, AddEmployeeActivity.class);
             startActivity(intent);
         });
+        ActionBar actionBar;
+        actionBar = getSupportActionBar();
         ColorDrawable colorDrawable
                 = new ColorDrawable(Color.parseColor("#0D7EF4"));
         assert actionBar != null;
@@ -88,6 +89,23 @@ public class MainActivity extends AppCompatActivity {
         recycler.setLayoutManager(new LinearLayoutManager(this));
     }
 
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        int id = item.getItemId();
+        if (id == R.id.action_search) {
+            // Handle search action
+            return true;
+        } else if (id == R.id.settings) {
+            // Navigate to SettingsActivity
+            startActivity(new Intent(this, SettingsActivity.class));
+            return true;
+        } else if (id == R.id.signout) {
+            // Handle sign out action
+            return true;
+        } else {
+            return super.onOptionsItemSelected(item);
+        }
+    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu, menu);

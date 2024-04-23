@@ -30,5 +30,4 @@
         android:backgroundTint="@color/secondary"
         android:src="@drawable/baseline_add_24"
         />
-
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

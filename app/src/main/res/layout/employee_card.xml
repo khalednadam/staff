@@ -75,23 +75,24 @@
                 android:weightSum="2"
                 android:orientation="horizontal"
                 >
+
                 <Button
-                    android:layout_weight="1"
-                    android:layout_width="0dp"
                     android:id="@+id/edit_btn"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="0dp"
                     android:layout_height="40dp"
-                    style="@style/Widget.Material3.Button.OutlinedButton"
-                    android:text="Edit"
                     android:layout_marginHorizontal="2dp"
-                    android:textColor="@color/primary"
-                    />
+                    android:layout_weight="1"
+                    android:text="Edit"
+                    android:textColor="@color/primary" />
+
                 <Button
                     android:layout_marginHorizontal="2dp"
                     android:layout_weight="1"
                     android:id="@+id/info_btn"
                     android:layout_width="0dp"
                     android:layout_height="40dp"
-                    style="@style/Widget.Material3.Button.TextButton"
+                    style="@style/Widget.MaterialComponents.Button"
                     android:textColor="@color/white"
                     android:text="Info"
                     android:backgroundTint="@color/primary"

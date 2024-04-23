@@ -26,7 +26,12 @@
         <activity
             android:name=".EditEmployeeActivity"
             android:parentActivityName=".MainActivity" />
-
+        <activity
+            android:name=".SettingsActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".EmployeeInfoActivity"
+            android:parentActivityName=".MainActivity" />
     </application>
 
 </manifest>

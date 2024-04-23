@@ -11,6 +11,10 @@
         android:iconTint="@color/white"
         />
     <item
+        android:id="@+id/settings"
+        android:title="Settings"
+        android:iconTint="@color/white" />
+    <item
         android:id="@+id/signout"
         android:title="Logout"
         android:iconTint="@color/white"

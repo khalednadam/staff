@@ -6,9 +6,10 @@
     android:background="@color/bg"
     android:layout_marginHorizontal="10dp">
 
+
     <androidx.cardview.widget.CardView
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
         android:id="@+id/img_card"
         app:cardCornerRadius="100dp"
         android:layout_centerHorizontal="true"
@@ -38,7 +39,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/select_image_btn"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:hint="Name">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -54,7 +55,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/name_layout"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:hint="Email">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -71,7 +72,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/email_layout"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:hint="Phone Number">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -88,7 +89,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/phone_layout"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:hint="Title">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -104,7 +105,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/title_layout"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:hint="Gender">
 
         <AutoCompleteTextView
@@ -121,9 +122,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/gender_layout"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
+        style="@style/Widget.MaterialComponents.Button"
         android:backgroundTint="@color/primary"
         android:text="Edit"
         android:textColor="@android:color/white" />
 
+    <Button
+        style="@style/Widget.MaterialComponents.Button"
+        android:id="@+id/button_delete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_add"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/design_default_color_error"
+        android:text="Delete"
+        android:textColor="@android:color/white" />
 </RelativeLayout>
